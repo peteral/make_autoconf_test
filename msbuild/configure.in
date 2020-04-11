@@ -1,0 +1,11 @@
+AC_INIT()
+
+AC_CHECK_PROG(MSBUILD, MSBuild.exe, yes, no)
+AS_IF(
+    [test x"$MSBUILD" == x"no"], 
+    [AC_MSG_ERROR([Please either put msbuild.exe to PATH or provide location using ./configure MSBUILD=path-to-ms-build.])]
+)
+AC_SUBST(MSBUILD)
+
+AC_CONFIG_FILES([makefile.config])
+AC_OUTPUT

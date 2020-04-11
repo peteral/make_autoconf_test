@@ -1,0 +1,2 @@
+MSBUILD = @MSBUILD@
+OPTIONS = -property:Configuration=Release
